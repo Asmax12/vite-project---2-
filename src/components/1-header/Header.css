@@ -1,0 +1,189 @@
+:root {
+  --main-orange: #E99239;
+  --main-bg: #3D464D;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+}
+
+/** =========================
+   Navbar
+**========================= */
+.nav {
+  background-color: var(--main-bg);
+}
+
+/** =========================
+   Logo
+**========================= */
+.logo img {
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/** =========================
+   Dropdown
+**========================= */
+.navbar .dropdown-toggle {
+  padding: 4px 8px;
+  font-size: 18px;
+}
+
+.navbar .dropdown-toggle:hover {
+  background-color: var(--main-orange) !important;
+  color: white !important;
+}
+
+/** =========================
+   Icons
+**========================= */
+.header-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  color: var(--main-orange);
+}
+
+.icon.person {
+  font-size: 28px;
+}
+
+.icon.bookmark,
+.icon.cart {
+  font-size: 20px;
+}
+
+/** =========================
+   Search
+**========================= */
+.search-form {
+  transition: transform 0.3s ease;
+}
+
+.search-form:hover {
+  transform: scale(1.05);
+}
+
+.search-input-group-text {
+  background-color: var(--main-orange) !important;
+  border: none !important;
+}
+
+.search-input-group-text .search-icon {
+  font-size: 20px;
+  color: white;
+}
+
+.search-input {
+  font-size: 13px;
+}
+
+/** =========================
+   Navigation Links
+**========================= **/
+.nav-links .nav-link {
+  color: white !important;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links .nav-link:hover {
+  color: var(--main-orange) !important;
+}
+
+.nav-link:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 40px;
+  background-color: var(--main-orange);
+}
+/* 
+!! =========================
+   Media Queries
+!!========================= !! */
+
+/* Lab */
+@media (max-width: 1225px) {
+  .search-form {
+    display: none !important;
+  }
+}
+
+/* Tab */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-bg);
+    z-index: 10;
+  }
+
+  .main-layout {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .logo img {
+    height: 60px;
+    width: auto;
+  }
+
+  .search-form {
+    order: 1;
+    width: 50% !important;
+    margin: 0;
+    display: block !important;
+  }
+
+  .lang-icons {
+    order: 3;
+  }
+
+  .nav-links {
+    width: 50%;
+    margin-top: 15px;
+    order: 2;
+  }
+
+  .nav-link:not(:last-child)::after {
+    content: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .main-layout {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-form {
+    width: 50% !important;
+    margin: 0;
+  }
+}
