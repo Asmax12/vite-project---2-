@@ -186,4 +186,9 @@ body {
     width: 50% !important;
     margin: 0;
   }
+    .logo img {
+    height: 100px;
+    /* width: auto; */
+  }
+
 }
