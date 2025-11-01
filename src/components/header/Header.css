@@ -7,11 +7,15 @@ body {
   font-family: 'Cairo', sans-serif;
 }
 
+
 /** =========================
    Navbar
 **========================= */
 .nav {
   background-color: var(--main-bg);
+  height:150px;
+  width:100%;
+  padding-top: 20px;
 }
 
 /** =========================
@@ -26,11 +30,24 @@ body {
 }
 
 /** =========================
-   Dropdown
+   Dropdown / Icons
 **========================= */
+.header-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute ;
+  top: 60px;
+  left:170px;
+  gap: 20PX;
+} 
+
 .navbar .dropdown-toggle {
-  padding: 4px 8px;
-  font-size: 18px;
+  width:55px ;
+  height: 42px;
+  padding:10px;
+  background-color: var(--main-bg);
+  border: none;
 }
 
 .navbar .dropdown-toggle:hover {
@@ -38,15 +55,6 @@ body {
   color: white !important;
 }
 
-/** =========================
-   Icons
-**========================= */
-.header-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
 
 .icon {
   color: white;
@@ -60,18 +68,47 @@ body {
 }
 
 .icon.person {
-  font-size: 28px;
+  font-size:32px;
 }
 
-.icon.bookmark,
-.icon.cart {
-  font-size: 20px;
+.icon.bookmark {
+  width:22px ;
+  height:32px ;
+}
+
+.icon-cart {
+  width:40px ;
+  height:43px ;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-cart:hover {
+  transform: scale(1.2);
+  color: var(--main-orange);
+}
+
+.header-icons .span {
+  position:absolute;
+  top:-8px;
+  right:-8px;
+  background: #E99239 ;
+  color: white;
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 50%;
+  font-weight: bold;
 }
 
 /** =========================
    Search
 **========================= */
 .search-form {
+  width: 333px;
+  height:44px;
+  position: absolute;
+  top:80px;
+  left:450px;
   transition: transform 0.3s ease;
 }
 
@@ -85,21 +122,35 @@ body {
 }
 
 .search-input-group-text .search-icon {
-  font-size: 20px;
+  width:13.64px;
+  height:12.57px;
   color: white;
 }
 
 .search-input {
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #807D7E;
 }
 
 /** =========================
-   Navigation Links
-**========================= **/
+   Nav Links
+**========================= */
+.nav-links {
+  position: absolute;
+  right: 10px; 
+  top: 80px; 
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Cairo', sans-serif;
+
+}
+
 .nav-links .nav-link {
   color: white !important;
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 22px;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -118,24 +169,24 @@ body {
   height: 40px;
   background-color: var(--main-orange);
 }
-/* 
-!! =========================
-   Media Queries
-!!========================= !! */
 
-/* Lab */
-@media (max-width: 1225px) {
+/*!! =========================
+   Media Queries
+/* !!========================= */
+
+/** Lap  **/
+
+@media (max-width: 1225px) and (min-width: 993px) {
   .search-form {
     display: none !important;
   }
 }
 
-/* Tab */
+/** Tab**/
 @media (max-width: 992px) {
   .navbar-collapse {
     position: absolute;
     top: 100%;
-    left: 0;
     width: 100%;
     background-color: var(--main-bg);
     z-index: 10;
@@ -145,29 +196,34 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 15px;
+    gap: 25px;
   }
 
-  .logo img {
-    height: 60px;
-    width: auto;
+  .header-icons,
+  .nav-links {
+    position: static !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
-
-  .search-form {
-    order: 1;
-    width: 50% !important;
-    margin: 0;
+.search-form {
     display: block !important;
-  }
+    position: static;  
+    width: 50%;
+    margin: 10px auto;
+    order: 1;
 
-  .lang-icons {
-    order: 3;
   }
 
   .nav-links {
-    width: 50%;
-    margin-top: 15px;
     order: 2;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-icons {
+    order: 3;
   }
 
   .nav-link:not(:last-child)::after {
@@ -175,20 +231,21 @@ body {
   }
 }
 
-/* Mobile */
+/** Mobile **/
 @media (max-width: 576px) {
   .main-layout {
     flex-direction: column;
     gap: 10px;
   }
 
-  .search-form {
-    width: 50% !important;
-    margin: 0;
-  }
-    .logo img {
-    height: 100px;
-    /* width: auto; */
-  }
-
 }
+
+
+
+
+
+
+
+
+
+
