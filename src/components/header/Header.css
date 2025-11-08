@@ -7,13 +7,12 @@ body {
   font-family: 'Cairo', sans-serif;
 }
 
-
 /** =========================
    Navbar
 **========================= */
 .nav {
   background-color: var(--main-bg);
-  height:150px;
+  height:140px;
   width:100%;
   padding-top: 20px;
 }
@@ -68,17 +67,17 @@ body {
 }
 
 .icon.person {
-  font-size:32px;
+  font-size:34px;
 }
 
 .icon.bookmark {
-  width:22px ;
+  width:30px;
   height:32px ;
 }
 
 .icon-cart {
-  width:40px ;
-  height:43px ;
+  width:35px ;
+  height:40px ;
   color: white;
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -107,7 +106,7 @@ body {
   width: 333px;
   height:44px;
   position: absolute;
-  top:80px;
+  top:70px;
   left:450px;
   transition: transform 0.3s ease;
 }
@@ -126,31 +125,32 @@ body {
   height:12.57px;
   color: white;
 }
-
 .search-input {
   font-size: 14px;
   font-weight: 400;
   color: #807D7E;
 }
-
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: var(--main-orange) !important; 
+}
 /** =========================
    Nav Links
 **========================= */
 .nav-links {
   position: absolute;
   right: 10px; 
-  top: 80px; 
+  top: 55px; 
   display: flex;
   align-items: center;
   gap: 16px;
-  font-family: 'Cairo', sans-serif;
-
 }
-
 .nav-links .nav-link {
   color: white !important;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 20px;
+  font-family: 'Cairo', sans-serif ;
+  padding:20px;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -176,10 +176,14 @@ body {
 
 /** Lap  **/
 
-@media (max-width: 1225px) and (min-width: 993px) {
+@media (max-width: 1240px) and (min-width: 993px) {
   .search-form {
     display: none !important;
   }
+.nav-links .nav-link {
+  padding-right:10px !important;
+  font-size:18px;
+}
 }
 
 /** Tab**/
@@ -215,22 +219,18 @@ body {
     order: 1;
 
   }
-
   .nav-links {
     order: 2;
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .header-icons {
     order: 3;
   }
-
   .nav-link:not(:last-child)::after {
     content: none;
   }
 }
-
 /** Mobile **/
 @media (max-width: 576px) {
   .main-layout {

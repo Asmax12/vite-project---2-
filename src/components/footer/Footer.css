@@ -1,0 +1,132 @@
+:root {
+  --main-orange: #E99239;
+  --main-bg: #3D464D;
+}
+
+.footer {background-color: var(--main-bg);
+  height: auto;}
+
+.row {border-bottom: 1px solid rgba(108, 117, 125, 1);}
+
+.footer .row .title-contact,
+.links .title,
+.links .links-title,
+.title-info {
+  font-family: 'Cairo', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footer .row .contact .text,
+.list-unstyled,
+.info {
+  font-size: 20px;
+  color: rgba(245, 245, 245, 1);
+}
+
+.list-unstyled .text-decoration-none {
+  color: rgba(245, 245, 245, 1);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.list-unstyled .text-decoration-none:hover {
+  color: var(--main-orange);
+}
+
+.label {direction: rtl !important;
+  text-align: right !important;
+  display: block;
+  padding-bottom: 18px;
+}
+
+.title-info { direction: rtl !important;
+  text-align: right !important;
+}
+
+
+.input-foot { width: 150px;
+  border: none;
+  background-color: transparent !important;
+  color: whitesmoke;
+}
+
+.input-foot::placeholder { color: whitesmoke;
+  opacity: 1;
+  font-size: 15px;
+}
+
+.info {display: flex;
+  flex-direction: column;
+  gap: 20px;}
+
+.info > div {width: 100%;}
+
+.form-foot {
+  display: flex;
+  align-items: center;      
+  gap: 10px;               
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  padding: 5px;
+  width: 100%;              
+  max-width:300px;    
+  box-sizing: border-box;   }
+
+.input-foot {
+  flex: 1 1 auto;           
+  min-width: 120px;        
+  border: none;
+  background-color: transparent !important;
+  color: whitesmoke;
+  padding: 5px;
+}
+
+.btn-foot {
+  flex-shrink: 0;          
+  width: 80px;
+  height: 30px;
+  font-size: 15px;
+  background-color: var(--main-orange);
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+.btn-foot:hover {
+  background-color: rgba(44, 40, 40, 0.395);
+}
+
+.icon-foot {
+  flex-shrink: 0;          
+  color: var(--main-orange);
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+}
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: white;
+  color: var(--main-orange);
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social a:hover {
+  background-color: var(--main-orange);
+  color: #fff;
+  transform: scale(1.1);
+}
+@media (max-width: 468px) {
+   .footer .row .contact .text,
+  .list-unstyled,
+  .info {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,139 @@
+.hero-section {
+  background: url('../../assets/hero.jpg') no-repeat center center;
+  background-size: cover;
+  height: 905px;
+  position: relative;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1E1E1EB2;
+  z-index: 1;
+}
+
+.Container {
+  position: relative;
+  width: 100%;
+  height: 555px;
+  top: 200px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.hero-content {
+  width: 800px;
+  height:auto;
+  position: absolute;
+  z-index: 3;
+  color: rgba(245, 245, 245, 1);
+}
+
+.hero-content .hero-description {
+  height:auto;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+  line-height: 45px;
+  font-size: 20px;
+}
+
+.hero-btn {
+  width: 230px;
+  height: 50px;
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(233, 146, 57, 1);
+  color: hwb(0 96% 4%);
+  margin-top: 30px; 
+  display: block;
+  margin-left: auto;
+  margin-right: 120px;
+  font-size:20px ;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+
+}
+.hero-btn:hover{
+  background-color: #1E1E1EB2; color: rgba(233, 146, 57, 1);}
+
+.hero-images { position: relative; width: 550px; height: 555px; }
+.hero-img {position: absolute; border-radius: 12px;  transform: translateX(760px)}
+.img1 { width: 335px; height: 555px; z-index: 4;}
+.img2 { width: 303px; height: 501px; top: 12px; left: 171.23px; z-index: 3;}
+.img3 {width: 264px; height: 436px; top: 36.64px; left: 336.13px; z-index: 2;}
+
+ /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Media Queries  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@media (max-width: 1452px) and (min-width: 1251px) {
+  .Container { top: 160px;}
+  .hero-images { max-width: 650px; }
+  .hero-img {transform: translateX(700px);}
+  .img1 { width: 300px; height: 500px; left: 80px; }
+  .img2 {width: 270px;height: 460px;left: 180px;}
+  .img3 { width: 240px;height: 420px;left: 260px; }
+  .hero-content { max-width: 700px;}
+  .hero-content .hero-description { font-size: 22px; line-height: 38px; }
+  .hero-section { height: 850px;}
+}
+/* ////////////////////////////////////////////////////////////////// */
+@media (max-width: 1250px) and (min-width: 993px) {
+
+  .Container { top: 150px; }
+
+  .hero-images { max-width: 550px;}
+  .hero-img { transform: translateX(560px);}
+  .img1 { width: 250px; height: 460px; left: 60px;}
+  .img2 { width: 230px; height: 420px;left: 150px;}
+  .img3 { width: 200px;  height: 380px; left: 240px; }
+  .hero-content { max-width: 550px; }
+  .hero-content .hero-description {font-size: 20px; line-height: 38px;   margin-left: 40px;  text-align: right;}
+  .hero-section { height: 800px; }
+}
+/* ////////////////////////////////////////////////////////////////////////// */
+/* tab  */
+@media (max-width: 993px) and (min-width: 768px) {
+
+  .Container { top: 120px;}
+  .hero-content .hero-description { font-size: 22px; line-height: 40px;  margin-left: 40px;
+    text-align: right;   margin-top: -50px !important;
+}
+  .hero-section { height: 700px;}
+  .hero-images { display: none;}
+  .hero-content { max-width: 100%; padding-left: 200px;}
+}
+/* ///////////////////////////////////////////////////////////////////////// */
+@media (max-width: 768px) and (min-width: 468px){
+  .hero-section {height:650px; }
+  .hero-images { display: none ;}
+  .hero-content {max-width: 100%;}
+  .hero-content .hero-description {
+    font-size: 18px;
+    line-height: 40px;
+    margin-top: -100px !important;
+    margin-left: 40px;
+    text-align: right;  }
+
+  .hero-btn {margin-top:-20px; width: 150px; height: 40px;}
+}
+
+/* ///////////////////////////////////////////////////////// */
+@media (max-width: 468px) {
+.hero-section {height:600px;}
+  .hero-content .hero-description {
+    margin-top:-80px !important;
+    text-align: right;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+    .hero-btn {margin-top:50px;}
+  .hero-images { display: none;}
+  .hero-btn {margin-top:0px; width: 150px; height: 40px; }
+}

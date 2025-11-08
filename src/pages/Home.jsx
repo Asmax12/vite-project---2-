@@ -1,9 +1,9 @@
-import Hero from '../components/hero/Hero'
+import Hero from "../components/hero/Hero";
 
-export default function Home() {
+export default function Home({ language }) {
   return (
-    <div>
-      <Hero />
-    </div>
-  )
+    <>
+      <Hero language={language} />
+    </>
+  );
 }
